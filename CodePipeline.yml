@@ -168,5 +168,5 @@ Resources:
                 RoleArn: 
                   Fn::GetAtt: [ CloudformationExecutionRole, Arn ]
                 StackName: !Join ['-', [!Ref Stage, !Ref 'AWS::AccountId', 'ECSService']]
-                TemplatePath: source-output-artifacts::public-service.yml
+                TemplatePath: source-output-artifacts::template_bluegreen.yml
             RunOrder: 1
