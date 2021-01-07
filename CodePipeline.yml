@@ -18,7 +18,7 @@ Parameters:
     Type: String
   ContainerPort:
     Type: Number
-    Default: 8080
+    Default: 80
 
 Resources:
 
@@ -167,6 +167,6 @@ Resources:
                   }
                 RoleArn: 
                   Fn::GetAtt: [ CloudformationExecutionRole, Arn ]
-                StackName: !Join ['-', [!Ref Stage, !Ref 'AWS::AccountId', 'ECSService']]
+                StackName: ECS-bluegreen
                 TemplatePath: source-output-artifacts::template_bluegreen.yml
             RunOrder: 1

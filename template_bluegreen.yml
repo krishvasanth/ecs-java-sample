@@ -2,6 +2,7 @@ AWSTemplateFormatVersion: '2010-09-09'
 Parameters:
   ImageURI:
     Type: String
+    Default: nginxdemos/hello:latest
   Vpc:
     Type: 'AWS::EC2::VPC::Id'
     Default: vpc-acebdfd6
